@@ -1,0 +1,15 @@
+ <!DOCTYPE html>
+<html>
+<body>
+
+<h2>Search Results</h2>
+
+{% for gene in results %}
+    <h3>{{ gene.name }}</h3>
+    <p>{{ gene.description }}</p>
+    <hr>
+{% endfor %}
+
+</body>
+<p> ggg</p>
+</html>
