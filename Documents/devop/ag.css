@@ -1,0 +1,18 @@
+:start {text-align: center;
+color: blueviolet ;
+font-size: medium;}
+p{padding: 20ex;
+padding-left: 10ex;
+padding-right: 20ex;}
+
+p{margin-bottom: 5cm;
+margin-right: 5cm ;}
+body { 
+    text-align: center;}
+h1{color: blue;}
+table{
+    text-align-last: center
+    ;color: aqua;}
+p{color: brown;} 
+venkatesh{color: yellowgreen;}
+ol{list-style-type: lower-roman;}

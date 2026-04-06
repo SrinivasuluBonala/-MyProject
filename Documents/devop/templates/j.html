@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Corrected Code</title>
+</head>
+
+<body class="bg-gray-900 text-white p-6">
+
+    <!-- Example 1 -->
+    <button onclick="alert('Go to sleep')" 
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        Click me!
+    </button>
+
+    <!-- Example 2 -->
+    <h1 id="title1">Hello</h1>
+    <button onclick="document.getElementById('title1').innerText='Button clicked!'" 
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        Click me 
+    </button>
+
+    <!-- Example 3 -->
+    <h1 id="title2">Hello</h1>
+    <button onclick="changeTitle2()" 
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        Click me!
+    </button>
+
+    <script>
+        function changeTitle2() {
+            document.getElementById('title2').innerText = 'Button clicked!';
+        }
+    </script>
+
+    <!-- Example 4 -->
+    <button id="btnAlert" 
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        Click me
+    </button>
+
+    <script>
+        document.getElementById('btnAlert').addEventListener('click', function() {
+            alert('Button was clicked');
+        });
+    </script>
+
+    <!-- Example 5 -->
+    <p id="demo">Click the button to change this text.</p>
+    <button onclick="document.getElementById('demo').innerHTML='Hello JavaScript!'" 
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        Click me!
+    </button>
+
+    <br><br>
+
+    <!-- Example 6 -->
+    <p id="listOutput">Click the button to show list, bold and paragraph.</p>
+
+    <button onclick="showList()" 
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        Show List + Bold + Paragraph
+    </button>
+
+    <script>
+        function showList() {
+            document.getElementById("listOutput").innerHTML = `
+                <p><b>This is bold text inside a paragraph.</b></p>
+                <p>Paragraph added using <b>innerHTML</b>.</p>
+                <ul>
+                    <li>Item 1 - HTML</li>
+                    <li>Item 2 - CSS</li>
+                    <li>Item 3 - JavaScript</li>
+                </ul>
+            `;
+        }
+    </script>
+
+    <br><br><hr><br>
+
+    <!-- Example 7 (Names and Friends) -->
+    <h2 id="demo2"></h2>
+
+    <h3 id="names">venky, srinivas, agnik</h3>
+
+    <ol>
+        <li id="friend1">rekha</li>
+        <li id="friend2">srinivas</li>
+        <li id="friend3">agnik</li>
+    </ol>
+
+    <button id="btnNames" 
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        Click Me
+    </button>
+
+    <script>
+        function updateContent() {
+            document.getElementById("demo2").innerHTML = "Hello Venky";
+            document.getElementById("names").innerHTML += " <b>bold text</b>";
+            document.getElementById("friend1").innerHTML = "Removed";
+        }
+
+        document.getElementById("btnNames").addEventListener("click", updateContent);
+    </script>
+
+    <br><br><hr><br>
+
+    <!-- Example 8 -->
+    <p id="name4">Original</p>
+
+    <button onclick="changeName4()" 
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        Change Text
+    </button>
+
+    <script>
+        function changeName4() {
+            document.getElementById('name4').innerHTML = "<i>Italia</i>";
+            document.getElementById('name4').style.color = "red";
+            document.body.style.backgroundColor = "yellow";
+        }
+    </script>
+
+</body>
+</html>
